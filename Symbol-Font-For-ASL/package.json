@@ -1,0 +1,16 @@
+{
+  "name": "aslfont",
+  "version": "0.0.1",
+  "description": "Symbols Font For ASL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies" : {
+    "xml2js"   :  ">=0.2.6",
+    "lazy"   :  ">=1.0.9"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD"
+}

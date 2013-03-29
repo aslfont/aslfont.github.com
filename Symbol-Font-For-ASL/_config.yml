@@ -1,0 +1,2 @@
+markdown:    maruku
+exclude: ['Gemfile.lock', 'Gemfile', 'dictionary', 's3']

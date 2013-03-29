@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Symbol Font for ASL" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    {{page_stylesheet}}
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "ASL-Font";
+        src:         url('symbol_font_for_asl/symbol_font_for_asl.ttf');
+      }
+      .asl {
+        font-family: ASL-Font;
+      }
+    </style>
+    
+    <title>ASL Font: {{page.title}}</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/aslfont/Symbol-Font-For-ASL">View on GitHub</a>
+
+          <h1 id="project_title">Symbol Font for ASL</h1>
+          <h2 id="project_tagline">How can you read and write American Sign Language?</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <nav>
+          <ul class="inline">
+            <li><a class="{% if page.selected == 'intro'      %}selected{% endif %}" href="index.html" >An Old Idea</a> &rarr; </li>
+            <li><a class="{% if page.selected == 'ways'       %}selected{% endif %}" href="page2.html" >Ways to Write</a> &rarr; </li>
+            <li><a class="{% if page.selected == 'bigq'       %}selected{% endif %}" href="page3.html" >The Big Question</a> &rarr; </li>
+            <li><a class="{% if page.selected == 'font'       %}selected{% endif %}" href="page4.html" >What is in this font?</a> &rarr; </li>
+            <li><a class="{% if page.selected == 'tryit'      %}selected{% endif %}" href="try-it.html">Try it!</a></li>
+          </ul>
+          {% if page.toplinks %}
+          <ul class="inline boxshadow-p">
+            <li><a class="{% if page.selected == 'download'   %}selected{% endif %}" href="https://github.com/aslfont/Symbol-Font-For-ASL/archive/master.zip">Download the font <span class="asl">_</span></a></li>
+            <li><a class="{% if page.selected == 'dictionary' %}selected{% endif %}" href="dictionary.html">ASL Dictionary <span class="asl">P</span></a></li>
+            <li><a class="{% if page.selected == 'reference'  %}selected{% endif %}" href="reference.html">Symbol Reference <span class="asl">@</span></a></li>
+          </ul>
+          {% endif %}
+        </nav>
+        {{content}}
+        
+        <hr>
+        
+        <nav>
+          <ul class="inline">
+            {{selected}}
+            <li><a class="{% if page.selected == 'intro'      %}selected{% endif %}" href="index.html" >An Old Idea</a> &rarr; </li>
+            <li><a class="{% if page.selected == 'ways'       %}selected{% endif %}" href="page2.html" >Ways to Write</a> &rarr; </li>
+            <li><a class="{% if page.selected == 'bigq'       %}selected{% endif %}" href="page3.html" >The Big Question</a> &rarr; </li>
+            <li><a class="{% if page.selected == 'font'       %}selected{% endif %}" href="page4.html" >What is in this font?</a> &rarr; </li>
+            <li><a class="{% if page.selected == 'tryit'      %}selected{% endif %}" href="try-it.html">Try it!</a></li>
+          </ul>
+          <ul class="inline boxshadow-p">
+            <li><a class="{% if page.selected == 'download'   %}selected{% endif %}" href="https://github.com/aslfont/Symbol-Font-For-ASL/archive/master.zip">Download the font <span class="asl">_</span></a></li>
+            <li><a class="{% if page.selected == 'dictionary' %}selected{% endif %}" href="dictionary.html">ASL Dictionary <span class="asl">P</span></a></li>
+            <li><a class="{% if page.selected == 'reference'  %}selected{% endif %}" href="reference.html">Symbol Reference <span class="asl">@</span></a></li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    {% for js in page.javascripts %}
+      <script src="{{js}}"></script>
+    {% endfor %}
+
+  </body>
+</html>
