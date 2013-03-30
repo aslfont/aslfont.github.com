@@ -385,7 +385,7 @@ $(document).ready(function(){
     $('#search_aslfont').animate({width: '82%'}, 200);
   });
 
-  $.ajax('dictionary/index/index.json', {
+  $.ajax('dictionary/index.json', {
     dataType: 'json',
     success: function(data) {
       Dictionary.buildIndex(data);

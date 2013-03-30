@@ -234,13 +234,8 @@ data = fs.readFileSync(sourceDir + 'dictionary_all.html');
       }
     };
     g = function(){
-      var dictFilename = destDir + 'index/index.json';
+      var dictFilename = destDir + 'index.json';
       write(dictFilename, JSON.stringify(dict).replace(/,/g, ',\n'));
-      
-      if(!fs.existsSync(destDir + 'javascripts'))
-        fs.mkdirSync(destDir + 'javascripts/');
-      var client_js = fs.readFileSync(sourceDir + '../javascripts/dictionary.js')
-      write(destDir + 'javascripts/dictionary.js', client_js);
     }
     f();
   }
