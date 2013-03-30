@@ -290,6 +290,7 @@ var Dictionary = {
     }
     
     if (results.length >= 10 || done) {
+      console.log(results.length);
       self.loadResults(results)
     }
     
@@ -338,73 +339,6 @@ var Dictionary = {
       $(this).parents('li').find('.description').toggle(100);
     });
   }
-  
-//   init : function () {
-// 
-//     update = function(){
-// //      keys = ;
-//     
-//       var limit = 10;
-//       var indexes = [];
-//       $.each(keys, function(i, k){
-//         if(!k.length) return;
-//         var index = getIndex(k);
-//         if(index)
-//           indexes.push(index);
-//         return index;
-//       });
-// 
-//       if (indexes.length < keys.length){
-//         if(!Timeout.delay()){
-//           $('#status').html('No Results');
-//         }
-//         return;
-//       }
-//     
-//       indexes.sort(function(a, b){
-//         return a.indexLength() - b.indexLength();
-//       });
-//     
-//       var results = [];
-//       var firstIndex = indexes.shift();
-//       $.each(firstIndex.hasEntry, function(k, v) {
-//         for(var i=0; i<indexes.length; i++){
-//           if(!indexes[i].hasEntry[k]){
-//             return;
-//           }
-//         }
-//         results.push(k);
-//       });
-//       indexes.unshift(firstIndex);
-//       var done = true;
-//       if (results.length < limit) {
-//         $.each(indexes, function (k, v){
-//           var d = v.fetchNext(cb);
-//           done = done && d;
-//         });
-//       }
-//       if(!done) {
-//         if(!Timeout.delay()){
-//           $('#status').html('No Results');
-//         }
-//       } else {
-//       }
-//     }
-//   
-//     var changeEvent = function(){
-//       var search = search_input.val().replace(/ +/,' ').replace(/^ | $/g, '');
-//       if(lastSearch == search || search.length == 0)
-//         return;
-//       lastSearch = search;
-//       RequestQueue.cancelAll();
-//       Timeout.fails = 0;
-//       if(!Timeout.delay()){
-//         $('#status').html('No Results');
-//       }
-//       $('#status').html('Searching...');
-//     };
-//   
-//   }
 };
 
 $(document).ready(function(){
