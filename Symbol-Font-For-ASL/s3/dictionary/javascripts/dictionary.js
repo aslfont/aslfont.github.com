@@ -133,7 +133,7 @@ var EntryIndex = {
       var done = self.filesLoaded >= parseInt(self.data.files);
       if(!done){
         var i = self.filesLoaded;
-        RequestQueue.requests.push($.ajax('dictionary/index/' + self.key + '.entries.' + (i++) + '.txt', {
+        RequestQueue.requests.push($.ajax('dictionary/index/' + self.data.key + '.entries.' + (i++) + '.txt', {
           success : function(data) {
             cb();
             var entries = data.split("\n");
@@ -160,13 +160,15 @@ var Dictionary = {
     self.index = {};
     self.hasKey = {};
     $.each(data, function(k, v) {
-      self.hasKey[k] = true;
+      var key = k.replace(/\..*$/,'');
+      v.key = k;
+      self.hasKey[key] = true;
       var o = self.index;
       for (var i = 0; i < self.indexDepth; i++) {
-        var p = (k[i] || '');
+        var p = (key[i] || '');
         o = (o[p] = o[p] || {});
       }
-      o[k] = v;
+      o[key] = v;
     });
   },
   
@@ -258,11 +260,18 @@ var Dictionary = {
     var search_keys = self.getSearchKeys(str, asl);
     var index_groups = self.getIndexesForSearchKeys(search_keys);
     var results = [];
+    var resultsDone = {};
 
     firstIndexGroup = index_groups.shift();
     var done = false;
+    
     $.each(firstIndexGroup.indexes, function (i, index) {
       $.each(index.hasEntry, function (entry) {
+        
+        if (resultsDone[entry])
+          return;
+        resultsDone[entry] = true;
+        
         var matches = true;
         $.each(index_groups, function (ii, index_group) {
           if (!index_group.contains(entry)) {
@@ -290,7 +299,6 @@ var Dictionary = {
     }
     
     if (results.length >= 10 || done) {
-      console.log(results.length);
       self.loadResults(results)
     }
     
