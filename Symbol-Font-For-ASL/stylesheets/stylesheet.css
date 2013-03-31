@@ -373,6 +373,11 @@ Full-Width Styles
   padding: .5em 0;
 }
 
+.padded {
+  padding-left:.5em;
+  padding-right:.5em;
+}
+
 .boxshadow, .boxshadow-p, a.selected, a.button {
   box-shadow: 0 0 5px #ebebeb;
   -webkit-box-shadow: 0 0 5px #ebebeb;
@@ -444,6 +449,7 @@ dl.inline dd {
   padding:0;
   margin-bottom:.25em;
   overflow:visible;
+  margin-right: -1em;
 }
 
 
@@ -465,8 +471,19 @@ dl.inline3 dd { width: 22%; }
 dl.inline3b dt { width: 12%; }
 dl.inline3b dd { width: 20%; }
 
+dl.inline3c dt { width: 15%; }
+dl.inline3c dd { width: 15%; }
+
 dl.inline4 dt { width: 8%; }
 dl.inline4 dd {  width: 15%; }
+
+dl.inline4b dt { width: 12%; }
+dl.inline4b dd { width: 12%; }
+
+dl.inline5 dt { width: 10%; }
+dl.inline5 dd {  width: 9%; }
+
+dl.inline dd input {width:80%; padding:.25em 9%; }
 
 .columns3 {
   width:30%;
@@ -575,10 +592,27 @@ ul.inline li {
 .red {
   color: #e00000; 
 }
+.gray {
+  color:#aaa;
+}
 .note {
   color: #666;
   padding: 0 2em;
   margin: 0 0 .5em;
+}
+
+.quiz {
+  text-align:left;
+  font-size:32px;
+  font-family: ASL-Font;
+  width:100%;
+  padding:.25em;
+  margin-bottom:.5em;
+}
+
+.correct {
+  background-color:#efe;
+  color:#1a1;
 }
 
 .tryit {
