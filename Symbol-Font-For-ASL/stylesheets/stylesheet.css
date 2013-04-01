@@ -462,6 +462,9 @@ dl.inline1b dd { width: 73%; }
 dl.inline2 dt { width: 16%; }
 dl.inline2 dd { width: 32%; }
 
+dl.inline2a dt { width: 10%; }
+dl.inline2a dd { width: 38%; }
+
 dl.inline2b dt { width: 20%; }
 dl.inline2b dd { width: 28%; }
 
@@ -603,6 +606,9 @@ ul.inline li {
   padding: 0 2em;
   margin: 0 0 .5em;
 }
+.center {
+  text-align:center;
+}
 
 .quiz {
   text-align:left;
@@ -611,6 +617,9 @@ ul.inline li {
   width:100%;
   padding:.25em;
   margin-bottom:.5em;
+}
+.quiz.center {
+  text-align:center;
 }
 
 .correct {
