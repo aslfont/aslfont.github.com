@@ -1,17 +1,45 @@
 
+<ul class="inline">
+  <li><a class="{% if page.section == '1-12'  %}selected{% endif %}" href="lesson1.html" >Lessons 1-12</a>  </li>
+  <li><a class="{% if page.section == '13-24'  %}selected{% endif %}" href="lesson13.html" >Lessons 13-24</a>  </li>
+</ul>
+
+{% if page.section == '1-12'%}
 <ul class="column">
   <li><a class="{% if page.selected == 'lesson1'  %}selected{% endif %}" href="lesson1.html" >Lesson 1: Handshapes</a>  </li>
   <li><a class="{% if page.selected == 'lesson2'  %}selected{% endif %}" href="lesson2.html" >Lesson 2: Head Locations 1</a>  </li>
   <li><a class="{% if page.selected == 'lesson3'  %}selected{% endif %}" href="lesson3.html" >Lesson 3: Body Locations 1</a>  </li>
   <li><a class="{% if page.selected == 'lesson4'  %}selected{% endif %}" href="lesson4.html" >Lesson 4: Contact Types 1</a>  </li>
   <li><a class="{% if page.selected == 'lesson5'  %}selected{% endif %}" href="lesson5.html" >Lesson 5: Directions</a>  </li>
+  <li><a class="{% if page.selected == 'lesson6'  %}selected{% endif %}" href="lesson6.html" >Lesson 6: Locations in Space 1</a>  </li>
 </ul>
 <ul class="column">
-  <li><a class="{% if page.selected == 'lesson6'  %}selected{% endif %}" href="lesson6.html" >Lesson 6: Head Locations 2</a>  </li>
-  <li><a class="{% if page.selected == 'lesson7'  %}selected{% endif %}" href="lesson7.html" >Lesson 7: Body Locations 2</a>  </li>
-  <li><a class="{% if page.selected == 'lesson8'  %}selected{% endif %}" href="lesson8.html" >Lesson 8: Arm Locations</a>  </li>
-  <li><a class="{% if page.selected == 'lesson9'  %}selected{% endif %}" href="lesson9.html" >Lesson 9: Contact Types 2</a>  </li>
-  <li><a class="{% if page.selected == 'lesson10'  %}selected{% endif %}" href="lesson10.html" >Lesson 10: Circular Movement</a>  </li>
+  <li><a class="{% if page.selected == 'lesson7'  %}selected{% endif %}" href="lesson7.html"  >Lesson 7: Palm Orientation 1</a>  </li>
+  <li><a class="{% if page.selected == 'lesson8'  %}selected{% endif %}" href="lesson8.html"  >Lesson 8: Head Locations 2</a>  </li>
+  <li><a class="{% if page.selected == 'lesson9'  %}selected{% endif %}" href="lesson9.html"  >Lesson 9: Body Locations 2</a>  </li>
+  <li><a class="{% if page.selected == 'lesson10' %}selected{% endif %}" href="lesson10.html" >Lesson 10: Arm Locations</a>  </li>
+  <li><a class="{% if page.selected == 'lesson11' %}selected{% endif %}" href="lesson11.html" >Lesson 11: Hand Locations 1</a>  </li>
+  <li><a class="{% if page.selected == 'lesson12' %}selected{% endif %}" href="lesson12.html" >Lesson 12: Contact Types 2</a>  </li>
 </ul>
+{% endif %}
+
+{% if page.section == '13-24'%}
+<ul class="column">
+  <li><a class="{% if page.selected == 'lesson13' %}selected{% endif %}" href="lesson13.html" >Lesson 13: Circular Movement</a>  </li>
+  <li><a class="{% if page.selected == 'lesson14' %}selected{% endif %}" href="lesson14.html" >Lesson 14: Changing Handshape</a>  </li>
+  <li><a class="{% if page.selected == 'lesson15' %}selected{% endif %}" href="lesson15.html" >Lesson 15: Changing Orientation</a>  </li>
+  <li><a class="{% if page.selected == 'lesson16' %}selected{% endif %}" href="lesson16.html" >Lesson 16: Wiggling Fingers</a>  </li>
+  <li><a class="{% if page.selected == 'lesson17' %}selected{% endif %}" href="lesson17.html" >Lesson 17: Moving Both Hands</a>  </li>
+  <li><a class="{% if page.selected == 'lesson18' %}selected{% endif %}" href="lesson18.html" >Lesson 18: Head/Body Movement 1</a>  </li>
+</ul>
+<ul class="column">
+  <li><a class="{% if page.selected == 'lesson19' %}selected{% endif %}" href="lesson19.html" >Lesson 19: Facial Expressions 1</a>  </li>
+  <li><a class="{% if page.selected == 'lesson20' %}selected{% endif %}" href="lesson20.html" >Lesson 20: Palm Orientation 2</a>  </li>
+  <li><a class="{% if page.selected == 'lesson21' %}selected{% endif %}" href="lesson21.html" >Lesson 21: Locations in Space 2</a>  </li>
+  <li><a class="{% if page.selected == 'lesson22' %}selected{% endif %}" href="lesson22.html" >Lesson 22: Hand Locations 2</a>  </li>
+  <li><a class="{% if page.selected == 'lesson23' %}selected{% endif %}" href="lesson23.html" >Lesson 23: Head/Body Movement 2</a>  </li>
+  <li><a class="{% if page.selected == 'lesson24' %}selected{% endif %}" href="lesson24.html" >Lesson 24: Facial Expressions 2</a>  </li>
+</ul>
+{% endif %}
 
 <br style="clear:both">
