@@ -453,7 +453,12 @@ dl.inline dd {
   overflow:visible;
   margin-right: -1em;
 }
+dl.left-align dt {
+  text-align: left;
+}
 
+dl.inline0 dt { width: 100%; }
+dl.inline0 dd { width: 100%; }
 
 dl.inline1 dt { width: 49%; }
 dl.inline1 dd { width: 49%; }
@@ -608,6 +613,8 @@ ul.inline li {
   padding: 0 2em;
   margin: 0 0 .5em;
 }
+
+
 .center {
   text-align:center;
 }
