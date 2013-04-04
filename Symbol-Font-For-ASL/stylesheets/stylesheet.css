@@ -206,10 +206,12 @@ dl dt {
 
 dl dd {
   padding-left: 20px;
+  padding-right: 20px;
 }
 
 dl p {
   padding-left: 20px;
+  padding-right: 20px;
 }
 
 hr {
