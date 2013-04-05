@@ -372,7 +372,7 @@ Full-Width Styles
 }
 
 .boxshadow-p {
-  padding: .5em 0;
+  padding: .5em 1em;
 }
 
 .padded {
@@ -395,6 +395,11 @@ a.selected {
   color: #fff;
   background-color: #212121;
   padding: .25em .5em;
+}
+
+.boxshadow-p a.selected {
+  color: #000;
+  background-color: transparent;
 }
 
 a.button {
@@ -431,6 +436,10 @@ dl.two-col p {
 
 dl.inline {
 /*  white-space: nowrap;*/
+  width: 100%;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 dl.inline dt {
