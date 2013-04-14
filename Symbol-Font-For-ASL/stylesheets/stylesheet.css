@@ -487,6 +487,9 @@ dl.inline2b dd { width: 28%; }
 dl.inline2c dt { width: 24%; }
 dl.inline2c dd { width: 24%; }
 
+dl.inline2d dt { width: 38%; }
+dl.inline2d dd { width: 10%; }
+
 dl.inline3 dt { width: 10%; }
 dl.inline3 dd { width: 22%; }
 
@@ -557,6 +560,11 @@ ul.column {
 }
 .medium dd.asl {
   font-size: 166%;
+}
+
+.dd-small dd {
+  white-space:nowrap;
+  font-size: 65%;
 }
 
 .asl.medium {
