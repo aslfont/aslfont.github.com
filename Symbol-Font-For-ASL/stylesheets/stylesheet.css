@@ -48,6 +48,28 @@ table {
   border-spacing: 0;
 }
 
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+
 /*******************************************************************************
 Theme Styles
 *******************************************************************************/
@@ -451,6 +473,10 @@ dl.inline dt {
   padding:0;
   margin-bottom:.25em;
   overflow:visible;
+}
+
+dl.dt-bold dt {
+  font-weight:bold;
 }
 
 dl.inline dd {
