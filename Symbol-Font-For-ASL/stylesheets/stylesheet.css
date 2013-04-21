@@ -560,6 +560,12 @@ dl.inline dd input {width:80%; padding:.25em 9%; }
   width: 65%;
 }
 
+.floatl {
+  float: left;
+  margin-right: 1em;
+  width: 65%;
+}
+
 
 ul.alpha li {
  list-style-type:upper-alpha;
