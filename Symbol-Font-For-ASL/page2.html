@@ -36,6 +36,7 @@ title: Ways to Write ASL
 </p>
 <br style="clear:both">
 
+
 <a href="https://github.com/aslfont/aslfont.github.com/issues/new?labels=feedback&title=HamNoSys" class="feedback">Feedback?</a>
 <h5 id="HamNoSys"><a href="http://www.sign-lang.uni-hamburg.de/dgs-korpus/index.php/hamnosys-97.html">Hamburg Notation System</a> (HamNoSys)</h5>
 <p>In 1985, a group of researchers at the University of Hamburg developed a system for writing signed languages.  It continues to be popular for academic purposes and has undergone four revisions.</p>
@@ -44,6 +45,13 @@ title: Ways to Write ASL
 <p><a href="http://www.sign-lang.uni-hamburg.de/dgs-korpus/index.php/hamnosys-97.html">HamNoSys Fonts</a> are available, and there is an <a href="http://www.sign-lang.uni-hamburg.de/hamnosys/input/">online interface for entering HamNoSys</a></p>
 <br style="clear:both">
 
+<a href="https://github.com/aslfont/aslfont.github.com/issues/new?labels=feedback&title=SignFont" class="feedback">Feedback?</a>
+<h5>SignFont</h5>
+<p>In 1987, a linguist named Donald Newkirk developed a writing system for ASL called SignFont at the Salk Institute in California and published the <i><a href="http://scriptsource.org/cms/scripts/page.php?item_id=source_detail&uid=zgrl8n56my">SignFont Handbook</a></i>.</p>
+<p>Very little about the <a href="http://www.amazon.co.uk/SignFont-handbook-Don-Newkirk/dp/B00072005Q/ref=sr_1_1?s=books&ie=UTF8&qid=1365548211&sr=1-1">book</a>, or the writing system, is available online.  The author did have a website that documented his work, but it was taken down in 2002.  A web-archive of the text of the page (with none of the symbols or images) is available here: <a href="http://web.archive.org/web/20000902024005/http://members.home.net/dnewkirk/signfont/">Archive of SignFont Home Page</a>.
+
+
+
 <a href="https://github.com/aslfont/aslfont.github.com/issues/new?labels=feedback&&title=ASLphabet" class="feedback">Feedback?</a>
 <h5 id="ASLphabet"><a href="http://aslphabet.com/">ASLphabet</a></h5>
 <p>In the 1990's, Deaf linguist Samuel Supalla started working on a simplified system for writing ASL.  He based it off of a system called SignFont that had been developed at the Salk Institute in California. </p>
@@ -51,9 +59,6 @@ title: Ways to Write ASL
 <p>ASLphabet is designed for teaching children in conjunction with the dictionary, and uses a very small, carefully chosen set of symbols.  It does not include non-manual features and was not intended to be used for writing full sentences.</p>
 <p><img src="images/aslphabet.png" style="float:left;margin-right:1em"/> These are the symbols used in ASLphabet.  There are 22 handshapes, 5 locations, and 5 movement types.  It is written left to right.  Each sign is written in this order: handshape, location, movement.</p>
 <p>You can read a <a href="http://www.deafculturecentre.ca/Public/Default.aspx?I=467&n=Animated+ASL+Dictionary+for+Children">transcript</a> of the <a href="http://www.deafculturecentre.ca/Public/Default.aspx?I=18&n=Program+Highlights">launch of the animated dictionary</a> from March 22, 2012</a>.</p>
-
-<!-- http://www.amazon.co.uk/SignFont-handbook-Don-Newkirk/dp/B00072005Q/ref=sr_1_1?s=books&ie=UTF8&qid=1365548211&sr=1-1 -->
-<!-- http://web.archive.org/web/20000902024005/http://members.home.net/dnewkirk/signfont/ -->
 
 <br style="clear:both">
 
@@ -163,7 +168,15 @@ IX:Alice VISIT-ME++          QM-W
     <td>Some</td>
     <td>Academic</td>
     <td>Linear</td>
-    <td>Unicode user space</td>
+    <td>Unicode Personal Use Area</td>
+  </tr>
+  <tr>
+    <th><a href="#SignFont">SignFont</a></th>
+    <td>Yes</td>
+    <td>Some</td>
+    <td>Academic</td>
+    <td>Linear</td>
+    <td>Yes, Custom Font</td>
   </tr>
   <tr>
     <th><a href="#ASLphabet">ASLphabet</a></th>
@@ -182,7 +195,7 @@ IX:Alice VISIT-ME++          QM-W
     <td>Unknown</td>
   </tr>
   <tr>
-    <th><a href="#ASLSJ">ASL Orthography</a></th>
+    <th><a href="#ASLOrthography">ASL Orthography</a></th>
     <td>Yes</td>
     <td>No</td>
     <td>Experimental</td>
@@ -206,12 +219,12 @@ IX:Alice VISIT-ME++          QM-W
     <td>Yes</td>
   </tr>
   <tr>
-    <th><a href="#ASLSJ">SignScript</a></th>
+    <th><a href="#SignScript">SignScript</a></th>
     <td>Yes</td>
     <td>Yes</td>
     <td>Public Use</td>
     <td>Linear</td>
-    <td>Yes</td>
+    <td>Yes, Custom Font</td>
   </tr>
   <tr>
     <th><a href="#Gloss">Gloss</a></th>
@@ -239,7 +252,7 @@ IX:Alice VISIT-ME++          QM-W
   <div style="padding-right:30px">
 <p>A few of these systems allow for some degree of ambiguity.  If the intended audience is signers who already know ASL, you only need to write enough information to make the sign recognizable.  You don't have to specify every detail of <em>how the sign is produced</em>. (ASLphabet and ASL Glossing are designed for signers who already know ASL.)</p>
 <p>Other systems are <em>intended</em> to communicate the specifics of the production of the sign to readers who may or may not know the sign themselves.  (SignWriting, HamNoSys, and SLIPA are designed to be as precise as possible.)</p>
-<p>Stokoe Notation si5s, and ASLSJ lie somewhere in-between.  They include a substantial degree of precision, but to some degree they rely on the reader knowing ASL.  (ASLSJ was specifically designed to allow a variable amount of ambiguity.  More common signs can be written succinctly, but less common signs may be written to convey more detail if desired.)</p>
+<p>Stokoe Notation, si5s, and ASLSJ lie somewhere in-between.  They include a substantial degree of precision, but to some degree they rely on the reader knowing ASL.  (ASLSJ was specifically designed to allow a variable amount of ambiguity.  More common signs can be written succinctly, but less common signs may be written to convey more detail if desired.)</p>
 <blockquote>Some ambiguity exists in written English as well.  Words that are <a href="http://en.wikipedia.org/wiki/Homograph">spelled the same but pronounced differently</a> can still be understood in the context of a sentence.  Spoken English can also be written unambiguously in the <a href="http://en.wikipedia.org/wiki/IPA_for_English">International Phonetic Alphabet</a>, a system designed for describing the exact sounds that are made when a language is spoken.</blockquote>
   </div>
 </div>
