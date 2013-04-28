@@ -143,7 +143,7 @@ a {
   -ms-transition: text-shadow 0.5s ease;
 }
 
-#main_content a:hover {
+.main_content a:hover {
   color: #0069ba;
   text-shadow: #0090ff 0px 0px 2px;
 }
@@ -174,13 +174,15 @@ pre, code {
   color: #222;
   background-color: #fff;
 
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 14px;
 
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
 
+}
+pre, code, .monospace {
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
 
 pre {
@@ -371,7 +373,7 @@ Full-Width Styles
   border-bottom: 1px solid #111;
 }
 
-#main_content {
+.main_content {
 
 }
 
@@ -584,6 +586,25 @@ ul.column {
   letter-spacing: 0px;
   font-weight: normal;
 }
+
+.si5s,
+.signscript,
+.aslphabet,
+.hamnosys {
+  font-size:   200%;
+  line-height: 1;
+  letter-spacing: 0px;
+  font-weight: normal;
+}
+
+.signscript {
+  font-size:150%;
+}
+
+.big .gloss {
+  font-size: 75%;
+}
+
 .medium {
   font-size: 125%;
 }
@@ -787,6 +808,15 @@ img.fullwidth {
   height:28px;
   margin-top:5px;
   vertical-align:middle;
+}
+
+.handshape_tables td {
+  text-align:center;
+  vertical-align:bottom;
+}
+
+tr.odd {
+  background-color:#e0e0e0;
 }
 
 /*******************************************************************************

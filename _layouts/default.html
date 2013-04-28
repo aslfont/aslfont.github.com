@@ -6,18 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Symbol Font for ASL" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{page.root}}stylesheets/stylesheet.css">
     {{page_stylesheet}}
     
-    <script src="javascripts/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
+    <script src="{{page.root}}javascripts/jquery.min.js"></script>
+    <script src="{{page.root}}javascripts/main.js"></script>
     <style>
       @font-face {
         font-family: "ASL-Font";
-        src:         url('symbol_font_for_asl/symbol_font_for_asl.ttf');
+        src:         url('{{page.root}}symbol_font_for_asl/symbol_font_for_asl.ttf');
       }
+      
+      @font-face {
+        font-family: 'HamnosysUnicodeRegular';
+        src: url('{{page.root}}fonts/hamnosysunicode-webfont.eot');
+        src: local('☺'), url('{{page.root}}fonts/hamnosysunicode-webfont.woff') format('woff'), url('{{page.root}}fonts/hamnosysunicode-webfont.ttf') format('truetype'), url('{{page.root}}fonts/hamnosysunicode-webfont.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+      
+      @font-face {
+        font-family: "ASLphabet";
+        src:         url('{{page.root}}fonts/aslphabet.ttf');
+      }
+
+      @font-face {
+        font-family: "SignScript";
+        src:         url('{{page.root}}fonts/signscript.ttf');
+      }
+
+      @font-face {
+        font-family: "si5s";
+        src:         url('{{page.root}}fonts/si5s.ttf');
+      }
+
       .asl {
         font-family: ASL-Font;
+      }
+      .hamnosys {
+        font-family: HamnosysUnicodeRegular;
+      }
+      .aslphabet {
+        font-family: ASLphabet;
+      }
+      .signscript {
+        font-family: SignScript;
+      }
+      .si5s {
+        font-family: "si5s";
       }
     </style>
     
@@ -39,21 +75,21 @@
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+      <section class="main_content inner">
         <nav>
           <ul class="inline">
-            <li><a class="{% if page.selected == 'intro'      %}selected{% endif %}" href="index.html" >An Old Idea</a> &rarr; </li>
-            <li><a class="{% if page.selected == 'ways'       %}selected{% endif %}" href="page2.html" >Ways to Write</a> &rarr; </li>
-            <li><a class="{% if page.selected == 'bigq'       %}selected{% endif %}" href="page3.html" >The Big Question</a> &rarr; </li>
-            <li><a class="{% if page.selected == 'font'       %}selected{% endif %}" href="page4.html" >What is in this font?</a> &rarr; </li>
-            <li><a class="{% if page.selected == 'tryit'      %}selected{% endif %}" href="try-it.html">Try it!</a></li>
+            <li><a class="{% if page.selected == 'intro'      %}selected{% endif %}" href="{{page.root}}index.html" >An Old Idea</a> &rarr; </li>
+            <li><a class="{% if page.selected == 'ways'       %}selected{% endif %}" href="{{page.root}}page2.html" >Ways to Write</a> &rarr; </li>
+            <li><a class="{% if page.selected == 'bigq'       %}selected{% endif %}" href="{{page.root}}page3.html" >The Big Question</a> &rarr; </li>
+            <li><a class="{% if page.selected == 'font'       %}selected{% endif %}" href="{{page.root}}page4.html" >What is in this font?</a> &rarr; </li>
+            <li><a class="{% if page.selected == 'tryit'      %}selected{% endif %}" href="{{page.root}}try-it.html">Try it!</a></li>
           </ul>
           {% if page.toplinks %}
           <ul class="inline boxshadow-p">
             <li><a class="{% if page.selected == 'download'   %}selected{% endif %}" href="https://github.com/aslfont/aslfont.github.com/archive/symbol_font_for_asl.zip">Download the font <span class="asl">_</span></a></li>
-            <li><a class="{% if page.selected == 'dictionary' %}selected{% endif %}" href="dictionary.html">ASL Dictionary <span class="asl">P</span></a></li>
-            <li><a class="{% if page.selected == 'reference'  %}selected{% endif %}" href="reference.html">Symbol Reference <span class="asl">@</span></a></li>
-            <li><a class="{% if page.selected == 'lesson1'    %}selected{% endif %}" href="lesson1.html">Lessons <span class="asl">B</span></a></li>
+            <li><a class="{% if page.selected == 'dictionary' %}selected{% endif %}" href="{{page.root}}dictionary.html">ASL Dictionary <span class="asl">P</span></a></li>
+            <li><a class="{% if page.selected == 'reference'  %}selected{% endif %}" href="{{page.root}}reference.html">Symbol Reference <span class="asl">@</span></a></li>
+            <li><a class="{% if page.selected == 'lesson1'    %}selected{% endif %}" href="{{page.root}}lesson1.html">Lessons <span class="asl">B</span></a></li>
           </ul>
           {% endif %}
         </nav>
@@ -64,17 +100,17 @@
         <nav>
           <ul class="inline">
             {{selected}}
-            <li><a class="{% if page.selected == 'intro'      %}selected{% endif %}" href="index.html" >An Old Idea</a> &rarr; </li>
-            <li><a class="{% if page.selected == 'ways'       %}selected{% endif %}" href="page2.html" >Ways to Write</a> &rarr; </li>
-            <li><a class="{% if page.selected == 'bigq'       %}selected{% endif %}" href="page3.html" >The Big Question</a> &rarr; </li>
-            <li><a class="{% if page.selected == 'font'       %}selected{% endif %}" href="page4.html" >What is in this font?</a> &rarr; </li>
-            <li><a class="{% if page.selected == 'tryit'      %}selected{% endif %}" href="try-it.html">Try it!</a></li>
+            <li><a class="{% if page.selected == 'intro'      %}selected{% endif %}" href="{{page.root}}index.html" >An Old Idea</a> &rarr; </li>
+            <li><a class="{% if page.selected == 'ways'       %}selected{% endif %}" href="{{page.root}}page2.html" >Ways to Write</a> &rarr; </li>
+            <li><a class="{% if page.selected == 'bigq'       %}selected{% endif %}" href="{{page.root}}page3.html" >The Big Question</a> &rarr; </li>
+            <li><a class="{% if page.selected == 'font'       %}selected{% endif %}" href="{{page.root}}page4.html" >What is in this font?</a> &rarr; </li>
+            <li><a class="{% if page.selected == 'tryit'      %}selected{% endif %}" href="{{page.root}}try-it.html">Try it!</a></li>
           </ul>
           <ul class="inline boxshadow-p">
             <li><a class="{% if page.selected == 'download'   %}selected{% endif %}" href="https://github.com/aslfont/aslfont.github.com/archive/symbol_font_for_asl.zip">Download the font <span class="asl">_</span></a></li>
-            <li><a class="{% if page.selected == 'dictionary' %}selected{% endif %}" href="dictionary.html">ASL Dictionary <span class="asl">P</span></a></li>
-            <li><a class="{% if page.selected == 'reference'  %}selected{% endif %}" href="reference.html">Symbol Reference <span class="asl">@</span></a></li>
-            <li><a class="{% if page.selected == 'lesson1'    %}selected{% endif %}" href="lesson1.html">Lessons <span class="asl">B</span></a></li>
+            <li><a class="{% if page.selected == 'dictionary' %}selected{% endif %}" href="{{page.root}}dictionary.html">ASL Dictionary <span class="asl">P</span></a></li>
+            <li><a class="{% if page.selected == 'reference'  %}selected{% endif %}" href="{{page.root}}reference.html">Symbol Reference <span class="asl">@</span></a></li>
+            <li><a class="{% if page.selected == 'lesson1'    %}selected{% endif %}" href="{{page.root}}lesson1.html">Lessons <span class="asl">B</span></a></li>
           </ul>
         </nav>
       </section>
