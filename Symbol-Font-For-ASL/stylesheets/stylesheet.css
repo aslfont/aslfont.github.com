@@ -214,9 +214,13 @@ ul, ol, dl {
   margin-bottom: 15px
 }
 
-ul li {
-  list-style: inside;
+ul, ol {
   padding-left: 20px;
+}
+
+ul li {
+  list-style: outside;
+  margin-bottom:.5em;
 }
 
 ol li {
