@@ -724,7 +724,7 @@ ul.results li {
 
 
 nav .boxshadow, nav .boxshadow-p {
-  text-align:center;
+  text-align:left;
 }
 nav .boxshadow a, nav .boxshadow-p a {
   color: #333;
