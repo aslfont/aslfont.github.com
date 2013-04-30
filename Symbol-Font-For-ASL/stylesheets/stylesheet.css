@@ -216,11 +216,12 @@ ul, ol, dl {
 
 ul, ol {
   padding-left: 20px;
+  margin-right: -20px;
+  margin-bottom:.5em;
 }
 
 ul li {
   list-style: outside;
-  margin-bottom:.5em;
 }
 
 ol li {
@@ -667,11 +668,18 @@ th a {
   text-decoration:underline;
 }
 
+ul.inline {
+  padding-left:0;
+}
 ul.inline li {
   display:inline-block;
   list-style:none;
   padding-left:0;
   margin-right:.75em;
+  
+}
+nav ul.inline {
+  padding-left:20px;
   
 }
 
