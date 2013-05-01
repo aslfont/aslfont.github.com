@@ -482,6 +482,10 @@ dl.inline dt {
   overflow:visible;
 }
 
+dl.inline dt.asl {
+  white-space:nowrap;
+}
+
 dl.dt-bold dt {
   font-weight:bold;
 }
