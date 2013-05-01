@@ -832,6 +832,9 @@ img.fullwidth {
   text-align:center;
   vertical-align:bottom;
 }
+tr {
+  background-color: #f2f2f2;
+}
 
 tr.odd {
   background-color:#e0e0e0;
