@@ -4,9 +4,10 @@
   <head>
     <script>
     var path = window.location.href;
+    path = path.substr(0, path.length - window.location.hash.length);
     path = path.substr(0, path.length - window.location.search.length);
     if (!path.match(/\/$|\.[a-zA-Z0-9]+$/)) {
-      window.location.href = path + '/' + window.location.search;
+      window.location.href = path + '/' + window.location.search + window.location.hash;
     }
     </script>
     <meta charset='utf-8' />
