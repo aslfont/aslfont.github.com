@@ -222,6 +222,7 @@ ul, ol {
 
 ul li {
   list-style: outside;
+  margin-bottom: .5em;
 }
 
 ol li {
@@ -271,6 +272,16 @@ td {
 form {
   background: #f2f2f2;
   padding: 20px;
+}
+
+sub {
+  vertical-align:sub;
+  font-size:75%;
+}
+
+sup {
+  vertical-align:super;
+  font-size:75%;
 }
 
 
@@ -497,7 +508,6 @@ dl.inline dd {
   padding:0;
   margin-bottom:.25em;
   overflow:visible;
-  margin-right: -1em;
 }
 dl.left-align dt {
   text-align: left;
@@ -528,7 +538,7 @@ dl.inline2d dt { width: 38%; }
 dl.inline2d dd { width: 10%; }
 
 dl.inline3 dt { width: 10%; }
-dl.inline3 dd { width: 22%; }
+dl.inline3 dd { width: 23%; }
 
 dl.inline3b dt { width: 12%; }
 dl.inline3b dd { width: 20%; }
@@ -599,7 +609,8 @@ ul.column {
 .si5s,
 .signscript,
 .aslphabet,
-.hamnosys {
+.hamnosys,
+.td-hamnosys td {
   font-size:   200%;
   line-height: 1;
   letter-spacing: 0px;
@@ -610,8 +621,11 @@ ul.column {
 .signfont,
 .signscript {
   font-size:150%;
+  line-height:1;
 }
-
+.gloss {
+  font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+}
 .big .gloss {
   font-size: 75%;
 }
@@ -679,6 +693,7 @@ ul.inline li {
   display:inline-block;
   list-style:none;
   padding-left:0;
+  margin-bottom: 0;
   margin-right:.75em;
   
 }
@@ -828,10 +843,20 @@ img.fullwidth {
   vertical-align:middle;
 }
 
+.orientation_tables td {
+  background-color:#fff;
+}
+.orientation_tables td,
 .handshape_tables td {
   text-align:center;
-  vertical-align:bottom;
+/*  vertical-align:bottom;*/
 }
+
+.handshape_tables .gloss,
+.orientation_tables .gloss {
+  text-align:left;
+}
+
 tr {
   background-color: #f2f2f2;
 }

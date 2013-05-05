@@ -56,6 +56,11 @@
         font-family: "iswa-front";
         src:         url('{{page.root}}fonts/iswa_front.ttf');
       }
+      
+      @font-face {
+        font-family: "iswa-orientation";
+        src:         url('{{page.root}}fonts/iswa_orientation_b.ttf');
+      }
 
       @font-face {
         font-family: "signfont";
@@ -65,7 +70,8 @@
       .asl {
         font-family: ASL-Font;
       }
-      .hamnosys {
+      .hamnosys,
+      .td-hamnosys td {
         font-family: HamnosysUnicodeRegular;
       }
       .aslphabet {
@@ -82,6 +88,9 @@
       }
       .handshape_tables .iswa {
         font-family: "iswa-front";
+      }
+      .orientation_tables .iswa {
+        font-family: "iswa-orientation";
       }
       .signfont {
         font-family: "signfont";
