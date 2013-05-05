@@ -843,6 +843,9 @@ img.fullwidth {
   vertical-align:middle;
 }
 
+.orientation_tables .si5s img{
+  vertical-align:top;
+}
 .orientation_tables td {
   background-color:#fff;
 }
