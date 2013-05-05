@@ -252,7 +252,7 @@ hr {
 }
 
 table {
-  border: 1px solid #373737;
+  border: 1px solid #ccc;
   margin-bottom: 20px;
   text-align: left;
  }
@@ -260,13 +260,14 @@ table {
 th {
   font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 10px;
-  background: #373737;
+  font-weight:bold;
+  background: #888;
   color: #fff;
  }
 
 td {
   padding: 10px;
-  border: 1px solid #373737;
+  border: 1px solid #ccc;
  }
 
 form {
