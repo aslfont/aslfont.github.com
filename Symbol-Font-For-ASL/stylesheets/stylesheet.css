@@ -441,6 +441,12 @@ a.selected {
 .boxshadow-p a.selected {
   color: #000;
   background-color: transparent;
+  text-shadow: rgba(0,0,0,.2) 0px 5px 10px, rgba(0,0,0,.2) 0px 4px 2px;
+  text-decoration: underline;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  -ms-box-shadow: none;
 }
 
 a.button {
@@ -514,47 +520,53 @@ dl.left-align dt {
   text-align: left;
 }
 
+dl.inline dt,
+dl.inline dd {
+  margin-left: -.2em;
+  margin-right: -.2em;
+}
+
 dl.inline0 dt { width: 100%; }
 dl.inline0 dd { width: 100%; }
 
-dl.inline1 dt { width: 49%; }
-dl.inline1 dd { width: 49%; }
+dl.inline1 dt { width: 50%; }
+dl.inline1 dd { width: 50%; }
 
 dl.inline1b dt { width: 25%; }
-dl.inline1b dd { width: 73%; }
+dl.inline1b dd { width: 75%; }
 
-dl.inline2 dt { width: 16%; }
-dl.inline2 dd { width: 32%; }
+dl.inline2 dt { width: 15%; }
+dl.inline2 dd { width: 35%; }
 
 dl.inline2a dt { width: 10%; }
-dl.inline2a dd { width: 38%; }
+dl.inline2a dd { width: 40%; }
 
-dl.inline2b dt { width: 20%; }
-dl.inline2b dd { width: 28%; }
+dl.inline2b dt { width: 23%; }
+dl.inline2b dd { width: 27%; }
 
-dl.inline2c dt { width: 24%; }
-dl.inline2c dd { width: 24%; }
+dl.inline2c dt { width: 25%; }
+dl.inline2c dd { width: 25%; }
 
-dl.inline2d dt { width: 38%; }
+dl.inline2d dt { width: 40%; }
 dl.inline2d dd { width: 10%; }
 
 dl.inline3 dt { width: 10%; }
-dl.inline3 dd { width: 22%; }
+dl.inline3 dd { width: 23%; }
 
-dl.inline3b dt { width: 12%; }
+dl.inline3b dt { width: 13%; }
 dl.inline3b dd { width: 20%; }
 
-dl.inline3c dt { width: 15%; }
+dl.inline3c dt { width: 18%; }
 dl.inline3c dd { width: 15%; }
 
-dl.inline4 dt { width: 8%; }
+dl.inline4 dt {  width: 10%; }
 dl.inline4 dd {  width: 15%; }
 
 dl.inline4b dt { width: 12%; }
 dl.inline4b dd { width: 12%; }
 
-dl.inline5 dt { width: 10%; }
-dl.inline5 dd {  width: 9%; }
+dl.inline5 dt {  width: 10%; }
+dl.inline5 dd {  width: 10%; }
 
 dl.inline dd input {width:80%; padding:.25em 9%; }
 
@@ -786,7 +798,7 @@ img.fullwidth {
 #dictionary_frame {
   border: none;
   width: 100%;
-  height: 500px;
+  height: 800px;
 }
 #try-it-form #author {
   font-weight:normal;

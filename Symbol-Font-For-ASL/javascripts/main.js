@@ -7,4 +7,6 @@ $(document).ready(function(){
     }
   };
   $('input.quiz').keyup(f).change(f).change();
+
 });
+

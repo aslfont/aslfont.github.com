@@ -7,11 +7,20 @@ $(document).ready(function(){
     return s;
   }
   
+  
   if(!$.cookie('aslfont-session')) {
     $.cookie('aslfont-session', rand());
   }
   
+  $('textarea#message').change(function() {
+    window.onbeforeunload = function() {
+        return 'Your message has not been saved.  Are you sure you want to leave?';
+    };
+  });
+  
   $('#done').click(function(e){
+    window.onbeforeunload = null;
+    
     e.preventDefault();
     $('#done').html('Saving...');
 
