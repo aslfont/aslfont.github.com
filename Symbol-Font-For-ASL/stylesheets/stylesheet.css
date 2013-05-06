@@ -840,7 +840,7 @@ img.fullwidth {
 }
 #dictionary header .asl {font-weight:normal;margin-left:.75em;}
 #dictionary header a {display:block;}
-#dictionary .description .asl {white-space:pre-wrap;}
+#dictionary .definition .asl {white-space:pre-wrap;}
 
 #dictionary h1 {display:inline;font-size:16px}
 #dictionary h2 {font-size:16px;margin-top:.5em;padding-bottom:0}

@@ -437,10 +437,10 @@ $(document).ready(function(){
     });
   }
   
-  if(urlParams.english) {
-    search_input = $('#search_english').val(urlParams.english);
-  } else if(urlParams.asl) {
+  if(urlParams.asl) {
     search_input = $('#search_aslfont').val(urlParams.asl);
+  } else {
+    search_input = $('#search_english').val(urlParams.english);
   }
   
   setTimeout(changeEvent, 500);
