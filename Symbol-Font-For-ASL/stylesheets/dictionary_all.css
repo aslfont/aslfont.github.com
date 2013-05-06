@@ -25,9 +25,20 @@ h3 {
   font-size:   36px;
   font-weight: normal;
   margin:      0;
+  display:inline;
 }
 
 h2 {
   font-size: 20px;
   margin:    0;
+  margin-right: 1em;
+  display: inline;
+}
+
+div.asl {
+  display:none;
+}
+
+blockquote {
+  display:none;
 }

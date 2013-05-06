@@ -315,27 +315,27 @@ var Dictionary = {
   
   loadResult: function (key) {
     var self = this;
-    var li = $('<li>').addClass('boxshadow').text('Loading...');
-    $('#results').append(li);
+    var section = $('<section>').addClass('boxshadow').text('Loading...');
+    $('#results').append(section);
     RequestQueue.requests.push($.ajax('dictionary/entries/' + key + '.json', {
       dataType: 'json',
       success: function(data) {
-        self.renderResult(li, data);
+        self.renderResult(section, data);
       }
     }));
   },
   
-  renderResult: function (li, data) {
+  renderResult: function (section, data) {
     var a, desc;
-    li.html('');
-    li.append($('<h3>').append(a = $('<a>').attr('href', '#')));
+    section.html('');
+    section.append($('<header>').append(a = $('<a>').attr('href', '#')));
     if(data.title && data.title.length){
       a.append($('<span>').text(data.title));
     }
     if(data.asl_title && data.asl_title.length){
       a.append($('<span>').addClass('asl').text(data.asl_title));
     }
-    li.append(desc = $('<div>').addClass('description').hide());
+    section.append(desc = $('<div>').addClass('description').hide());
     if(data.description && data.description.length){
       desc.append($('<div>').text(data.description));
     }
@@ -344,7 +344,7 @@ var Dictionary = {
     }
     a.click(function(e){
       e.preventDefault();
-      $(this).parents('li').find('.description').toggle(100);
+      $(this).parents('section').find('.description').toggle(100);
     });
   }
 };

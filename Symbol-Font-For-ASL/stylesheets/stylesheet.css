@@ -761,12 +761,6 @@ nav ul.inline {
   margin-bottom:.5em;
 }
 
-ul.results li {
-  list-style-type:none;
-  padding:.5em;
-  margin-bottom:.5em;
-}
-
 
 nav .boxshadow, nav .boxshadow-p {
   text-align:left;
@@ -837,13 +831,19 @@ img.fullwidth {
 #dictionary {
   background-color: #f2f2f2;
 }
-#dictionary h3 .asl {font-weight:normal;margin-left:.75em;}
-#dictionary h3 a {display:block;}
+#dictionary header {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+}
+#dictionary header .asl {font-weight:normal;margin-left:.75em;}
+#dictionary header a {display:block;}
 #dictionary .description .asl {white-space:pre-wrap;}
 
 #dictionary h1 {display:inline;font-size:16px}
 #dictionary h2 {font-size:16px;margin-top:.5em;padding-bottom:0}
-#dictionary h3 {font-size:16px;margin:0;padding:0;}
 #dictionary #search_english {
   font-size:120%;
 }
@@ -855,6 +855,12 @@ img.fullwidth {
   margin-top:5px;
   vertical-align:middle;
 }
+#dictionary .results section {
+  list-style-type:none;
+  padding:.5em;
+  margin-bottom:.5em;
+}
+
 
 .orientation_tables .si5s img{
   vertical-align:top;

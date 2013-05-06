@@ -77,10 +77,10 @@ var entryFileName = function(id) {
 
 var makeEntry = function (item) {
   return {
-    'title' : item.h2[0],
-    'asl_title' : item.h3[0],
-    'description' : item.blockquote[0],
-    'asl_description' : item.div[0]['_']
+    'title' : item.header[0].span[0],
+    'asl_title' : item.header[0].span[1]['_'],
+    'description' : item.div[0].div[0],
+    'asl_description' : item.div[0].div[1]['_']
   }
 };
 
@@ -209,7 +209,7 @@ data = fs.readFileSync(sourceDir + 'dictionary_all.html');
       words.forEach(function(word){
         if(!blacklist[word])
           // md5 for case insensitive file systems
-          append(destDir + 'index/' + word + '.' + md5(word) + '.entries_all.txt', item_id + "\n");
+          append(destDir + 'index/' + word + '.' + md5(word).substr(0, 6) + '.entries_all.txt', item_id + "\n");
       });
     });
     var entries = fs.readdirSync(destDir + 'index');
