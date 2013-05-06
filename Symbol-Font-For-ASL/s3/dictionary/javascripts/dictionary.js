@@ -1,4 +1,13 @@
 (function () {
+  var match,
+      pl     = /\+/g,  // Regex for replacing addition symbol with a space
+      search = /([^&=]+)=?([^&]*)/g,
+      decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+      query  = window.location.search.substring(1);
+
+  urlParams = {};
+  while (match = search.exec(query))
+     urlParams[decode(match[1])] = decode(match[2]);
 
 if (typeof String.prototype.startsWith != 'function') {
   String.prototype.startsWith = function (str){
@@ -427,6 +436,15 @@ $(document).ready(function(){
       }
     });
   }
+  
+  if(urlParams.english) {
+    search_input = $('#search_english').val(urlParams.english);
+  } else if(urlParams.asl) {
+    search_input = $('#search_aslfont').val(urlParams.asl);
+  }
+  
+  setTimeout(changeEvent, 500);
+  
 });
 
 })();

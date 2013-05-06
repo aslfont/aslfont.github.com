@@ -3,3 +3,5 @@ of
 and
 but
 for
+a
+an
