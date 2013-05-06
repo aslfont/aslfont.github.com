@@ -1,4 +1,12 @@
-var sourceDir = __dirname + '/';
+/*
+
+  cp stylesheets/stylesheet.css s3/dictionary/stylesheets/
+  cp javascripts/jquery.min.js s3/dictionary/javascripts/
+  s3cmd put -r s3/* s3://aslfont/
+
+*/
+
+var sourceDir = __dirname + '/../s3/';
 var destDir = __dirname + '/../s3/dictionary/';
 
 var fs      = require('fs'),
@@ -191,7 +199,7 @@ var loadBlackList = function (f){
 
 var blacklist = loadBlackList();
 
-data = fs.readFileSync(sourceDir + 'dictionary_all.html');
+data = fs.readFileSync(sourceDir + 'dictionary_offline.html');
 
 (new xml2js.Parser()).parseString(data, function (err, result) {
   if(err)

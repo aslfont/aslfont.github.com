@@ -315,7 +315,7 @@ var Dictionary = {
   
   loadResult: function (key) {
     var self = this;
-    var section = $('<section>').addClass('boxshadow').text('Loading...');
+    var section = $('<section>').text('Loading...');
     $('#results').append(section);
     RequestQueue.requests.push($.ajax('dictionary/entries/' + key + '.json', {
       dataType: 'json',
@@ -335,7 +335,7 @@ var Dictionary = {
     if(data.asl_title && data.asl_title.length){
       a.append($('<span>').addClass('asl').text(data.asl_title));
     }
-    section.append(desc = $('<div>').addClass('description').hide());
+    section.append(desc = $('<div>').addClass('definition').hide());
     if(data.description && data.description.length){
       desc.append($('<div>').text(data.description));
     }
@@ -344,13 +344,14 @@ var Dictionary = {
     }
     a.click(function(e){
       e.preventDefault();
-      $(this).parents('section').find('.description').toggle(100);
+      $(this).parents('section').find('.definition').toggle(100);
     });
   }
 };
 
 $(document).ready(function(){
   
+  var offline = !$('#results').length;
   var search_input, lastSearch = [];
   
   var timeout = Timeout.create();
@@ -364,7 +365,35 @@ $(document).ready(function(){
       if(lastSearch[0] == search && lastSearch[1] == search_input.attr('data-asl'))
         return;
       lastSearch = [search, search_input.attr('data-asl')];
-      Dictionary.search(search, search_input.attr('data-asl'));
+      if (offline) {
+        search = search.split(' ');
+        var is_asl = search_input.attr('data-asl');
+        var aslclass = is_asl ? '.asl' : '';
+        $('section').each(function(){
+          var t = $(this);
+          var match = true;
+          for (var i=0;i<search.length;i++) {
+            var s = is_asl ? search[i] : search[i].toLowerCase();
+            var title = ' ' + t.find("span"+aslclass).first().text();
+            var desc  = ' ' + t.find("div.definition div"+aslclass).first().text();
+            if (!is_asl) {
+              title = title.toLowerCase();
+              desc = desc.toLowerCase();
+            }
+            if(title.indexOf((is_asl ? '': ' ') + s) !== -1
+                || desc.indexOf(' '+s) !== -1
+            ) {
+              continue;
+            } else {
+              t.hide();
+              return;
+            }
+          }
+          t.show();
+        });
+      } else {
+        Dictionary.search(search, search_input.attr('data-asl'));
+      }
     }, 500);
   };
   
@@ -385,12 +414,19 @@ $(document).ready(function(){
     $('#search_aslfont').animate({width: '82%'}, 200);
   });
 
-  $.ajax('dictionary/index.json', {
-    dataType: 'json',
-    success: function(data) {
-      Dictionary.buildIndex(data);
-    }
-  })
+  if(offline) {
+    $('header').click(function(e){
+      e.preventDefault();
+      $(this).parents('section').find('.definition').toggle(100);
+    });
+  } else {
+    $.ajax('dictionary/index.json', {
+      dataType: 'json',
+      success: function(data) {
+        Dictionary.buildIndex(data);
+      }
+    });
+  }
 });
 
 })();

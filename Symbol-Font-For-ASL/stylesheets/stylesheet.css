@@ -4,7 +4,7 @@ Slate Theme for GitHub Pages
 by Jason Costello, @jsncostello
 *******************************************************************************/
 
-@import url(pygment_trac.css);
+/* @import url(pygment_trac.css); */
 
 /*******************************************************************************
 MeyerWeb Reset
@@ -407,7 +407,7 @@ Full-Width Styles
 /* classes */
 
 
-.boxshadow, .boxshadow-p {
+.boxshadow, .boxshadow-p, #dictionary section {
   margin-bottom:1.5em;
   background-color:#fff;
 }
@@ -421,7 +421,7 @@ Full-Width Styles
   padding-right:.5em;
 }
 
-.boxshadow, .boxshadow-p, a.selected, a.button {
+.boxshadow, .boxshadow-p, a.selected, a.button, #dictionary section {
   box-shadow: 0 0 5px #ebebeb;
   -webkit-box-shadow: 0 0 5px #ebebeb;
   -moz-box-shadow: 0 0 5px #ebebeb;
@@ -855,8 +855,7 @@ img.fullwidth {
   margin-top:5px;
   vertical-align:middle;
 }
-#dictionary .results section {
-  list-style-type:none;
+#dictionary section {
   padding:.5em;
   margin-bottom:.5em;
 }
