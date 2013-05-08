@@ -636,7 +636,7 @@ ul.column {
   font-size:150%;
   line-height:1;
 }
-.gloss {
+.stokoe, .gloss {
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
 }
 .big .gloss {
@@ -876,6 +876,13 @@ img.fullwidth {
 .handshape_tables .gloss,
 .orientation_tables .gloss {
   text-align:left;
+}
+.location_tables .stokoe {
+  font-size:160%;
+  line-height:.5;
+}
+.location_tables .iswa {
+  font-size:300%;
 }
 
 tr {
