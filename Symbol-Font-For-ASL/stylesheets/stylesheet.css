@@ -443,6 +443,7 @@ a.selected {
   background-color: transparent;
   text-shadow: rgba(0,0,0,.2) 0px 5px 10px, rgba(0,0,0,.2) 0px 4px 2px;
   text-decoration: underline;
+  padding: 0;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   -o-box-shadow: none;
@@ -864,6 +865,7 @@ img.fullwidth {
 .orientation_tables .si5s img{
   vertical-align:top;
 }
+.location_tables td,
 .orientation_tables td {
   background-color:#fff;
 }

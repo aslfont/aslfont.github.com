@@ -25,9 +25,26 @@ $(document).ready(function(){
     } else if (urlParams.english){
       url += '?english=' + encodeURIComponent(urlParams.english);
     }
-    console.log(url)
     $('#dictionary_frame').attr('src', url);
   }
+  
+  if ($('#asl-location-nav').length) {
+    $('.location-img').hide();
+    $('#symbol-font-for-asl-locations').show();
+    $('#asl-location-nav a[href=#symbol-font-for-asl-locations]').addClass('selected');
+    $('#asl-location-nav a').each(function(){
+      var f = function(){
+        $('.location-img').hide();
+        var id = $(this).attr('href');
+        $(id).show();
+        $('#asl-location-nav a').removeClass('selected');
+        $(this).addClass('selected');
+      };
+      $(this).hover(f).focus(f).click(function(e){e.preventDefault();$(this).focus();});
+    });
+  }
+  
+  
 
 });
 
