@@ -184,25 +184,34 @@ var Dictionary = {
   keysLike: function (str, first) {
     var self = this;
     var candidates = [self.index];
+    var iteration = 0;
     for (var i = 0; i < self.indexDepth; i++) {
       var o = [];
       $.each(candidates, function (ii, candidate) {
+        candidate = iteration > 0 ? candidate.v : candidate;
         if (i < str.length) {
           if (candidate[str[i]]) {
-            o.push(candidate[str[i]]);
+            o.push({k:str[i], v:candidate[str[i]]});
           }
         } else {
           $.each(candidate, function(iii, v) {
-            o.push(v);
+            o.push({k:iii, v:v});
           })
         }
       });
       candidates = o;
+      iteration ++;
     }
+    candidates = candidates.sort(function(a, b){
+      if (a.k.length == b.k.length) {
+        return a.k < b.k ? -1 : (a.k > b.k ? 1 : 0);
+      }
+      return a.k.length - b.k.length;
+    });
     keysLike = {};
     var done = false;
     $.each(candidates, function (i, candidate) {
-      $.each(candidate, function (k, v) {
+      $.each(candidate.v, function (k, v) {
         if (k.startsWith(str)) {
           keysLike[k] = v;
           if(first) {
@@ -326,6 +335,7 @@ var Dictionary = {
     var self = this;
     var section = $('<section>').text('Loading...');
     $('#results').append(section);
+    $('#status').html('Results');
     RequestQueue.requests.push($.ajax('dictionary/entries/' + key + '.json', {
       dataType: 'json',
       success: function(data) {
@@ -365,13 +375,15 @@ $(document).ready(function(){
   
   var timeout = Timeout.create();
 
-  var changeEvent = function(){
+  var changeEvent = function(e){
     RequestQueue.cancelAll();
     timeout.delay(function (){
       var search = search_input.val().replace(/ +/,' ').replace(/^ | $/g, '');
       if(search.length == 0)
         return;
-      if(lastSearch[0] == search && lastSearch[1] == search_input.attr('data-asl'))
+      if(lastSearch[0] == search 
+        && lastSearch[1] == search_input.attr('data-asl')
+        && e.which != 13)
         return;
       lastSearch = [search, search_input.attr('data-asl')];
       if (offline) {
@@ -401,6 +413,7 @@ $(document).ready(function(){
           t.show();
         });
       } else {
+        $('#status').html('Loading ...');
         Dictionary.search(search, search_input.attr('data-asl'));
       }
     }, 500);
