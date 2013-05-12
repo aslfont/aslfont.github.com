@@ -620,6 +620,18 @@ ul.column {
   font-weight: normal;
 }
 
+.transcript {
+  font-size:85%;
+}
+.transcript .asl {
+  line-height:1.25em;
+  white-space:pre;
+}
+
+.transcript .english {
+  font-size:150%;
+}
+
 .si5s,
 .signscript,
 .aslphabet,
